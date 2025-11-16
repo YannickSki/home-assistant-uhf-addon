@@ -1,23 +1,21 @@
-{
-  "name": "UHF Server",
-  "version": "0.1.0",
-  "slug": "uhf_addon",
-  "description": "Run UHF Server as a Home Assistant add-on",
-  "arch": ["armv7", "armhf", "aarch64"],
-  "startup": "services",
-  "boot": "auto",
-  "options": {
-    "recordings_dir": "/share/uhf",
-    "host": "0.0.0.0",
-    "port": 8000
-  },
-  "schema": {
-    "recordings_dir": "str",
-    "host": "str",
-    "port": "int"
-  },
-  "ports": {"8000/tcp": 8000},
-  "map": ["config:rw","ssl:rw","share:rw"],
-  "webui": 8000,
-  "host_network": true
-}
+name: UHF Server
+version: 0.1.0
+slug: uhf_addon
+description: Run UHF Server as a Home Assistant add-on
+url: https://github.com/YannickSki/home-assistant-uhf-addon
+arch:
+  - armv7
+  - armhf
+  - aarch64
+init: false
+ingress: false
+panel_admin: false
+apparmor: true
+legacy: true
+map:
+  - config:rw
+  - share:rw
+ports:
+  8000/tcp: 8000
+image: "local/uhf_addon"
+host_network: true
