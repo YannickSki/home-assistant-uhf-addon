@@ -1,3 +1,6 @@
-name: UHF server for Home Assistant
-url: https://github.com/YannickSki/home-assistant-uhf-addon
-maintainer: Yannick van Loon (yannickvanloon1999@gmial.com)
+name: "UHF Server Add-on"
+maintainer: "YannickSki"
+url: "https://github.com/YannickSki/home-assistant-uhf-addon"
+slug: "uhf_addon"
+description: "UHF Server for Home Assistant"
+version: "1.0"
